@@ -3,30 +3,30 @@ Apollo-DuerOS 是一套与 Apollo 相关的远程信息处理产品，目前有�
  
 ## Android 车机的 CarLife  
 
-[Android 车机的 CarLife](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/CarLife-Android-Vehicle) 是CarLife协议在Android平台上的实现。
+[Android 车机的 CarLife](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/CarLife-Android-Vehicle) 是 CarLife 协议在 Android 平台上的实现。
 
 [CarLife](http://carlife.baidu.com/) 是智能手机集成解决方案，通过多屏幕共享和交互技术，驾驶员可通过该解决方案与 MD（移动设备）到 HU（主机）共享适合安全驾驶条件的移动应用程序，并使用触摸屏，硬键，旋钮控制和麦克风控制 CarLife。 
 ![CarLife Screen](CarLife.jpeg)
 
-All the business logic is on the mobilephone side，and the vehicle side  is primarily responsible for the functions of connection, protocol parsing, video decoding, audio playback and touch events.
+所有业务逻辑都在移动电话端，车机端主要负责连接、协议解析、视频解码、音频播放和触摸事件的功能。
 
-CarLife mobilephone terminal support iOS and Android platform, vehicle terminal support Android, Linux, WINCE, QNX and other platforms.
+CarLife 手机终端支持 iOS 和 Android 平台，车机终端支持 Android、Linux、WINCE、QNX 等平台。
 
 ## CarLife 车机库
-[CarLifeVehicleLib](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/CarLife-Vehicle-Lib) is a C++ based cross platform dynamic library, which realizes the function of channel establishment, data sending and receiving, protocol parsing and packing in HU CarLife. Using this library can speed up the development of CarLife in HU.
+[CarLife 车机库](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/CarLife-Vehicle-Lib) is a C++ based cross platform dynamic library, which realizes the function of channel establishment, data sending and receiving, protocol parsing and packing in HU CarLife. Using this library can speed up the development of CarLife in HU.
 
 
 ## DuerOS 启动器
 Lanucher is the interface of the first user graphical interaction of the Android terminal,is the start of the installation of other applications on the terminal entrance(Telephone, radio, and so on need to be connected to app).
 ![Launcher Screen](Launcher.jpeg)
 
-### [DuerOS 启动器](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DuerOS-Launcher) Features:
-1. For the driving scene design, using lightweight, scientific sense of the UI design
+### [DuerOS 启动器](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DuerOS-Launcher)特性：
+1. 适用于驾驶场景设计，采用轻巧、科学的 UI 设计感
 
-2. The home page aggregated voice, maps, music and other entrances, the car scene is more convenient to use
+2. 主页汇总语音、地图、音乐等入口，车内场景使用更方便
 
-## DSP Solution for Apollo DuerOS
-[The  DSP solution](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DSP-Solution-For-DuerOS) includes two parts: front-end signal acquisition and voice signal processing.
+## Apollo DuerOS 的 DSP 解决方案
+[DSP 解决方案](https://github.com/ApolloAuto/apollo-DuerOS/tree/master/DSP-Solution-For-DuerOS) includes two parts: front-end signal acquisition and voice signal processing.
 ![DSPSolution](DSPDesign.png)
 Front-end signal acquisition is completed through a set of MIC array (2~3 MIC), while the voice signal processing is achieved by DSP. The DSP chips embedded into the motherboard of the vehicle would work on echo’s noise cancellation and directional voice pick-up, and then convey the processed signal to the main CPU layer, and finally the signals would flow into the Baidu Voice ASR Engine.
 
